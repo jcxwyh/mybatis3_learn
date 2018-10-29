@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybati s . org//DTD Config 3 . 0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--<typeAliases>-->
+        <!--<typeAlias type="person" alias="pro.onlyou.mybatis.entity.Person"/>-->
+    <!--</typeAliases>-->
+
+    <environments default="development">
+        <environment id="development">
+            <!-- 配置事物管理器 -->
+            <transactionManager type="JDBC"></transactionManager>
+
+            <!-- 配置数据库，POOLED表示使用mybatis内提供的连接池 -->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://39.108.164.150:3306/mybatis_learn"/>
+                <property name="username" value="root"/>
+                <property name="password" value="jcx120708"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--<mappers>-->
+        <!--<mapper resource=""/>-->
+    <!--</mappers>-->
+</configuration>
